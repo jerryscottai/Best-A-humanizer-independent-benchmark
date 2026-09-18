@@ -1,0 +1,75 @@
+{
+  "slug": "undetectable",
+  "name": "Undetectable.ai",
+  "field_notes": {
+    "headline": "Best meaning and length preservation",
+    "body": "Returned the source length exactly and retained nearly every important element — the worked example, seasonal detail, customer questions, disclosure requirements, fact-checking, tone adjustment, and firsthand knowledge. Its best sentences were concise and faithful. Two obvious errors held it back: a sentence fragment in the opening, and an awkward determiner in the conclusion.",
+    "verdict": "The strongest option for preserving the source and controlling length, but not completely publication-ready without correcting two obvious errors.",
+    "observed_word_count": 185
+  },
+  "points": [
+    {
+      "cycle": "August 2026",
+      "composite": 82.53,
+      "bypass_rate": 0.82,
+      "detector_breakdown": {
+        "gptzero": 0.8875,
+        "originality": 0.6997,
+        "copyleaks": 0.7367,
+        "winston": 0.8441,
+        "zerogpt": 0.8552
+      },
+      "category_breakdown": {
+        "academic_essay": 0.8594,
+        "application_essay": 0.7778,
+        "blog_post": 0.7946,
+        "business_email": 0.7135,
+        "discussion_board": 0.8619,
+        "marketing_copy": 0.9175,
+        "news_article": 0.746
+      }
+    },
+    {
+      "cycle": "July 2026",
+      "composite": 81.07,
+      "bypass_rate": 0.806,
+      "detector_breakdown": {
+        "gptzero": 0.8688,
+        "originality": 0.7005,
+        "copyleaks": 0.7186,
+        "winston": 0.822,
+        "zerogpt": 0.8671
+      },
+      "category_breakdown": {
+        "academic_essay": 0.8601,
+        "application_essay": 0.9226,
+        "blog_post": 0.7265,
+        "business_email": 0.7245,
+        "discussion_board": 0.7438,
+        "marketing_copy": 0.7757,
+        "news_article": 0.828
+      }
+    },
+    {
+      "cycle": "June 2026",
+      "composite": 80.44,
+      "bypass_rate": 0.79,
+      "detector_breakdown": {
+        "gptzero": 0.8596,
+        "originality": 0.6768,
+        "copyleaks": 0.684,
+        "winston": 0.8084,
+        "zerogpt": 0.8334
+      },
+      "category_breakdown": {
+        "academic_essay": 0.9217,
+        "application_essay": 0.6736,
+        "blog_post": 0.7422,
+        "business_email": 0.7429,
+        "discussion_board": 0.8349,
+        "marketing_copy": 0.9001,
+        "news_article": 0.6371
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "notegpt",
+  "name": "NoteGPT",
+  "field_notes": {
+    "headline": "Most conversational rewrite",
+    "body": "The liveliest output in the test — varied sentence lengths and concrete conversational phrasing that flowed naturally and avoided the rigid cadence common in rewritten passages. The style came with tradeoffs: it expanded the passage by roughly 40% despite a neutral tone setting, altered a key noun, and added details that were not in the original.",
+    "verdict": "The strongest conversational version, but too long and too casual for a neutral professional rewrite.",
+    "observed_word_count": 258
+  },
+  "points": [
+    {
+      "cycle": "August 2026",
+      "composite": 69.79,
+      "bypass_rate": 0.88,
+      "detector_breakdown": {
+        "gptzero": 0.9226,
+        "originality": 0.7821,
+        "copyleaks": 0.7974,
+        "winston": 0.9046,
+        "zerogpt": 0.9032
+      },
+      "category_breakdown": {
+        "academic_essay": 0.9161,
+        "application_essay": 0.8749,
+        "blog_post": 0.7925,
+        "business_email": 1,
+        "discussion_board": 0.7639,
+        "marketing_copy": 0.8922,
+        "news_article": 0.9646
+      }
+    },
+    {
+      "cycle": "July 2026",
+      "composite": 67.97,
+      "bypass_rate": 0.866,
+      "detector_breakdown": {
+        "gptzero": 0.9169,
+        "originality": 0.7531,
+        "copyleaks": 0.8011,
+        "winston": 0.8906,
+        "zerogpt": 0.8898
+      },
+      "category_breakdown": {
+        "academic_essay": 0.8911,
+        "application_essay": 0.684,
+        "blog_post": 0.9413,
+        "business_email": 0.7756,
+        "discussion_board": 0.9051,
+        "marketing_copy": 1,
+        "news_article": 0.8125
+      }
+    },
+    {
+      "cycle": "June 2026",
+      "composite": 68.57,
+      "bypass_rate": 0.849,
+      "detector_breakdown": {
+        "gptzero": 0.8982,
+        "originality": 0.7483,
+        "copyleaks": 0.7476,
+        "winston": 0.8601,
+        "zerogpt": 0.8841
+      },
+      "category_breakdown": {
+        "academic_essay": 0.8077,
+        "application_essay": 0.8096,
+        "blog_post": 0.7417,
+        "business_email": 0.9295,
+        "discussion_board": 0.7508,
+        "marketing_copy": 0.9897,
+        "news_article": 0.9613
+      }
+    }
+  ]
+}

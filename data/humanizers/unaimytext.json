@@ -1,0 +1,75 @@
+{
+  "slug": "unaimytext",
+  "name": "UnAIMyText",
+  "field_notes": {
+    "headline": "Verbose and inconsistent",
+    "body": "Expanded the passage by about a fifth. The broad thesis survived, but several constructions read as less natural than the source, including a malformed noun phrase and a double-conjunction error. It also introduced details that did not appear in the original passage.",
+    "verdict": "Understandable overall, but weakened by grammatical errors, added material, and awkward phrasing.",
+    "observed_word_count": 221
+  },
+  "points": [
+    {
+      "cycle": "August 2026",
+      "composite": 60.64,
+      "bypass_rate": 0.72,
+      "detector_breakdown": {
+        "gptzero": 0.7979,
+        "originality": 0.601,
+        "copyleaks": 0.6378,
+        "winston": 0.7279,
+        "zerogpt": 0.7828
+      },
+      "category_breakdown": {
+        "academic_essay": 0.833,
+        "application_essay": 0.7089,
+        "blog_post": 0.6489,
+        "business_email": 0.469,
+        "discussion_board": 0.9052,
+        "marketing_copy": 0.711,
+        "news_article": 0.7422
+      }
+    },
+    {
+      "cycle": "July 2026",
+      "composite": 58.58,
+      "bypass_rate": 0.709,
+      "detector_breakdown": {
+        "gptzero": 0.7624,
+        "originality": 0.6115,
+        "copyleaks": 0.6281,
+        "winston": 0.73,
+        "zerogpt": 0.7486
+      },
+      "category_breakdown": {
+        "academic_essay": 0.9226,
+        "application_essay": 0.8783,
+        "blog_post": 0.4352,
+        "business_email": 0.431,
+        "discussion_board": 0.6937,
+        "marketing_copy": 0.6264,
+        "news_article": 0.9495
+      }
+    },
+    {
+      "cycle": "June 2026",
+      "composite": 59.06,
+      "bypass_rate": 0.694,
+      "detector_breakdown": {
+        "gptzero": 0.771,
+        "originality": 0.5803,
+        "copyleaks": 0.608,
+        "winston": 0.7166,
+        "zerogpt": 0.7298
+      },
+      "category_breakdown": {
+        "academic_essay": 0.8995,
+        "application_essay": 0.5403,
+        "blog_post": 0.9498,
+        "business_email": 0.7668,
+        "discussion_board": 0.7391,
+        "marketing_copy": 0.3393,
+        "news_article": 0.6702
+      }
+    }
+  ]
+}

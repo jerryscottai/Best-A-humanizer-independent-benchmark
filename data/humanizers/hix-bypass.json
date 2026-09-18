@@ -1,0 +1,75 @@
+{
+  "slug": "hix-bypass",
+  "name": "HIX Bypass",
+  "field_notes": {
+    "headline": "Most editing required",
+    "body": "The longest and least controlled rewrite among the lower-ranked results, expanding the source by roughly a quarter. The output included malformed expressions and a broken compound modifier, and it introduced business idioms that changed the original tone and meaning.",
+    "verdict": "Usable only as a starting point; every paragraph needed hands-on correction.",
+    "observed_word_count": 235
+  },
+  "points": [
+    {
+      "cycle": "August 2026",
+      "composite": 52.42,
+      "bypass_rate": 0.7,
+      "detector_breakdown": {
+        "gptzero": 0.7569,
+        "originality": 0.6142,
+        "copyleaks": 0.6174,
+        "winston": 0.7264,
+        "zerogpt": 0.7722
+      },
+      "category_breakdown": {
+        "academic_essay": 0.7461,
+        "application_essay": 0.5492,
+        "blog_post": 0.5951,
+        "business_email": 0.7793,
+        "discussion_board": 0.6784,
+        "marketing_copy": 0.8442,
+        "news_article": 0.773
+      }
+    },
+    {
+      "cycle": "July 2026",
+      "composite": 50.54,
+      "bypass_rate": 0.689,
+      "detector_breakdown": {
+        "gptzero": 0.7572,
+        "originality": 0.5803,
+        "copyleaks": 0.6014,
+        "winston": 0.7094,
+        "zerogpt": 0.7515
+      },
+      "category_breakdown": {
+        "academic_essay": 0.8922,
+        "application_essay": 0.7303,
+        "blog_post": 0.2883,
+        "business_email": 0.7359,
+        "discussion_board": 0.9236,
+        "marketing_copy": 0.6181,
+        "news_article": 0.8617
+      }
+    },
+    {
+      "cycle": "June 2026",
+      "composite": 50.44,
+      "bypass_rate": 0.675,
+      "detector_breakdown": {
+        "gptzero": 0.7356,
+        "originality": 0.5515,
+        "copyleaks": 0.5792,
+        "winston": 0.701,
+        "zerogpt": 0.7251
+      },
+      "category_breakdown": {
+        "academic_essay": 0.4055,
+        "application_essay": 0.79,
+        "blog_post": 0.8865,
+        "business_email": 0.4317,
+        "discussion_board": 0.6497,
+        "marketing_copy": 0.5898,
+        "news_article": 1
+      }
+    }
+  ]
+}

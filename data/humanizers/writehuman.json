@@ -1,0 +1,75 @@
+{
+  "slug": "writehuman",
+  "name": "WriteHuman",
+  "field_notes": {
+    "headline": "Best concise rewrite",
+    "body": "Cut the passage by roughly a tenth while keeping a clear progression from AI-assisted drafting through human review to disclosure. Coherent and easy to follow, but it compressed away useful detail and leaned on repeated words. One phrasing was awkward, and it introduced a meaningful change: it suggested AI should perform the final edit, where the source assigned fact-checking, tone, and final judgment to a person.",
+    "verdict": "Readable and efficient, but less precise than GPTHuman or Undetectable.ai.",
+    "observed_word_count": 166
+  },
+  "points": [
+    {
+      "cycle": "August 2026",
+      "composite": 76.6,
+      "bypass_rate": 0.84,
+      "detector_breakdown": {
+        "gptzero": 0.8829,
+        "originality": 0.7291,
+        "copyleaks": 0.7492,
+        "winston": 0.8654,
+        "zerogpt": 0.8833
+      },
+      "category_breakdown": {
+        "academic_essay": 0.8923,
+        "application_essay": 0.9092,
+        "blog_post": 0.8083,
+        "business_email": 0.9375,
+        "discussion_board": 0.7397,
+        "marketing_copy": 0.6923,
+        "news_article": 0.9586
+      }
+    },
+    {
+      "cycle": "July 2026",
+      "composite": 74.1,
+      "bypass_rate": 0.828,
+      "detector_breakdown": {
+        "gptzero": 0.8605,
+        "originality": 0.7344,
+        "copyleaks": 0.725,
+        "winston": 0.8413,
+        "zerogpt": 0.8589
+      },
+      "category_breakdown": {
+        "academic_essay": 0.947,
+        "application_essay": 0.8084,
+        "blog_post": 0.8551,
+        "business_email": 1,
+        "discussion_board": 0.9479,
+        "marketing_copy": 0.4748,
+        "news_article": 0.9897
+      }
+    },
+    {
+      "cycle": "June 2026",
+      "composite": 73.88,
+      "bypass_rate": 0.811,
+      "detector_breakdown": {
+        "gptzero": 0.8625,
+        "originality": 0.7008,
+        "copyleaks": 0.7142,
+        "winston": 0.8279,
+        "zerogpt": 0.8684
+      },
+      "category_breakdown": {
+        "academic_essay": 0.9058,
+        "application_essay": 0.7566,
+        "blog_post": 0.6072,
+        "business_email": 0.8587,
+        "discussion_board": 0.9544,
+        "marketing_copy": 0.9408,
+        "news_article": 0.6871
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "argumentative_essay",
+    "category": "academic_essay",
+    "template": "Write a 400-word argumentative essay arguing that [TOPIC].",
+    "resolved": "Write a 400-word argumentative essay arguing that the rise of long-form podcasts as a primary news source.",
+    "placeholders": {
+      "TOPIC": "the rise of long-form podcasts as a primary news source"
+    }
+  },
+  {
+    "slug": "business_email",
+    "category": "business_email",
+    "template": "Write a 250-word email to my team announcing [POLICY].",
+    "resolved": "Write a 250-word email to my team announcing moving expense reports onto a new monthly cadence.",
+    "placeholders": {
+      "POLICY": "moving expense reports onto a new monthly cadence"
+    }
+  },
+  {
+    "slug": "cover_letter",
+    "category": "application_essay",
+    "template": "Write a 400-word cover letter for a [ROLE] position.",
+    "resolved": "Write a 400-word cover letter for a early-career product designer position.",
+    "placeholders": {
+      "ROLE": "early-career product designer"
+    }
+  },
+  {
+    "slug": "discussion_post",
+    "category": "discussion_board",
+    "template": "Write a 250-word response to this prompt: [PROMPT].",
+    "resolved": "Write a 250-word response to this prompt: What is the role of empathy in online learning environments?.",
+    "placeholders": {
+      "PROMPT": "What is the role of empathy in online learning environments?"
+    }
+  },
+  {
+    "slug": "howto_blog",
+    "category": "blog_post",
+    "template": "Write a 400-word guide on how to [TASK].",
+    "resolved": "Write a 400-word guide on how to prepare for a coding-interview loop.",
+    "placeholders": {
+      "TASK": "prepare for a coding-interview loop"
+    }
+  },
+  {
+    "slug": "landing_copy",
+    "category": "marketing_copy",
+    "template": "Write 300 words of landing page copy for a SaaS product that does [THING].",
+    "resolved": "Write 300 words of landing page copy for a SaaS product that does weekday meal-prep routines.",
+    "placeholders": {
+      "THING": "weekday meal-prep routines"
+    }
+  },
+  {
+    "slug": "listicle_blog",
+    "category": "blog_post",
+    "template": "Write a 400-word blog post titled '10 Tips for [THING]' in a casual tone.",
+    "resolved": "Write a 400-word blog post titled '10 Tips for building a calmer morning routine' in a casual tone.",
+    "placeholders": {
+      "THING": "building a calmer morning routine"
+    }
+  },
+  {
+    "slug": "lit_review",
+    "category": "academic_essay",
+    "template": "Write a 400-word literature review introduction on [TOPIC].",
+    "resolved": "Write a 400-word literature review introduction on youth screen-time and adolescent mental health.",
+    "placeholders": {
+      "TOPIC": "youth screen-time and adolescent mental health"
+    }
+  },
+  {
+    "slug": "news_article",
+    "category": "news_article",
+    "template": "Write a 400-word news article about [TOPIC].",
+    "resolved": "Write a 400-word news article about urban housing affordability.",
+    "placeholders": {
+      "TOPIC": "urban housing affordability"
+    }
+  },
+  {
+    "slug": "personal_statement",
+    "category": "application_essay",
+    "template": "Write a 350-word personal statement explaining why I want to study [FIELD].",
+    "resolved": "Write a 350-word personal statement explaining why I want to study atmospheric chemistry.",
+    "placeholders": {
+      "FIELD": "atmospheric chemistry"
+    }
+  },
+  {
+    "slug": "product_desc",
+    "category": "marketing_copy",
+    "template": "Write a 200-word product description for [ITEM].",
+    "resolved": "Write a 200-word product description for a beginner-friendly acoustic guitar.",
+    "placeholders": {
+      "ITEM": "a beginner-friendly acoustic guitar"
+    }
+  }
+]

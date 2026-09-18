@@ -1,0 +1,75 @@
+{
+  "slug": "zerogpt-humanizer",
+  "name": "ZeroGPT Humanizer",
+  "field_notes": {
+    "headline": "Good fidelity, weak grammar",
+    "body": "Retained most of the source argument and stayed reasonably close to the original structure — the worked example, the disclosure requirement, and the role of human review all remained recognizable. The prose did not hold up: several serious errors, including garbled prepositional phrases and a mangled clause, plus missing punctuation where commas were needed.",
+    "verdict": "The meaning largely survived, but the prose required substantial editing.",
+    "observed_word_count": 195
+  },
+  "points": [
+    {
+      "cycle": "August 2026",
+      "composite": 65.35,
+      "bypass_rate": 0.76,
+      "detector_breakdown": {
+        "gptzero": 0.8101,
+        "originality": 0.6443,
+        "copyleaks": 0.6839,
+        "winston": 0.7691,
+        "zerogpt": 0.7943
+      },
+      "category_breakdown": {
+        "academic_essay": 0.9767,
+        "application_essay": 0.2572,
+        "blog_post": 0.9015,
+        "business_email": 0.9903,
+        "discussion_board": 0.4885,
+        "marketing_copy": 0.9577,
+        "news_article": 0.6949
+      }
+    },
+    {
+      "cycle": "July 2026",
+      "composite": 64.7,
+      "bypass_rate": 0.748,
+      "detector_breakdown": {
+        "gptzero": 0.8047,
+        "originality": 0.6374,
+        "copyleaks": 0.6689,
+        "winston": 0.7633,
+        "zerogpt": 0.771
+      },
+      "category_breakdown": {
+        "academic_essay": 0.6129,
+        "application_essay": 0.6715,
+        "blog_post": 0.9786,
+        "business_email": 0.8068,
+        "discussion_board": 0.5559,
+        "marketing_copy": 0.99,
+        "news_article": 0.3593
+      }
+    },
+    {
+      "cycle": "June 2026",
+      "composite": 65.17,
+      "bypass_rate": 0.733,
+      "detector_breakdown": {
+        "gptzero": 0.7811,
+        "originality": 0.6285,
+        "copyleaks": 0.6495,
+        "winston": 0.7645,
+        "zerogpt": 0.7738
+      },
+      "category_breakdown": {
+        "academic_essay": 0.8412,
+        "application_essay": 0.723,
+        "blog_post": 0.8201,
+        "business_email": 0.2233,
+        "discussion_board": 0.9887,
+        "marketing_copy": 0.6884,
+        "news_article": 0.7054
+      }
+    }
+  ]
+}

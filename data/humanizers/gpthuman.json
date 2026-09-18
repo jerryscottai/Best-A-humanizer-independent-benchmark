@@ -1,0 +1,75 @@
+{
+  "slug": "gpthuman",
+  "name": "GPTHuman AI",
+  "field_notes": {
+    "headline": "Best overall writing quality",
+    "body": "The strongest balance of naturalness, professional tone, and sentence-level control. No obvious grammatical errors, logical paragraph divisions, and the central argument survived intact. Showed genuine variation rather than mechanical synonym replacement — phrases like \"do the heavy lifting\" and \"spare people from the drudgery\" read naturally without tipping into the excessively casual. Not a perfect copy: a few small fidelity shifts, and the output ran longer than the source.",
+    "verdict": "The most publication-ready result in the field test, with minor fidelity issues that would still merit a final human review.",
+    "observed_word_count": 212
+  },
+  "points": [
+    {
+      "cycle": "August 2026",
+      "composite": 88.28,
+      "bypass_rate": 0.94,
+      "detector_breakdown": {
+        "gptzero": 0.97,
+        "originality": 0.8516,
+        "copyleaks": 0.8679,
+        "winston": 0.9503,
+        "zerogpt": 0.9597
+      },
+      "category_breakdown": {
+        "academic_essay": 0.9086,
+        "application_essay": 0.9761,
+        "blog_post": 0.9499,
+        "business_email": 0.9968,
+        "discussion_board": 0.9192,
+        "marketing_copy": 0.8936,
+        "news_article": 0.9675
+      }
+    },
+    {
+      "cycle": "July 2026",
+      "composite": 86.24,
+      "bypass_rate": 0.926,
+      "detector_breakdown": {
+        "gptzero": 0.9651,
+        "originality": 0.8006,
+        "copyleaks": 0.8323,
+        "winston": 0.9351,
+        "zerogpt": 0.9537
+      },
+      "category_breakdown": {
+        "academic_essay": 0.9967,
+        "application_essay": 0.942,
+        "blog_post": 0.9056,
+        "business_email": 0.8195,
+        "discussion_board": 0.9639,
+        "marketing_copy": 0.876,
+        "news_article": 0.9619
+      }
+    },
+    {
+      "cycle": "June 2026",
+      "composite": 85.13,
+      "bypass_rate": 0.913,
+      "detector_breakdown": {
+        "gptzero": 0.9586,
+        "originality": 0.7995,
+        "copyleaks": 0.8247,
+        "winston": 0.9277,
+        "zerogpt": 0.9404
+      },
+      "category_breakdown": {
+        "academic_essay": 0.9984,
+        "application_essay": 0.9677,
+        "blog_post": 0.8464,
+        "business_email": 0.8843,
+        "discussion_board": 0.8655,
+        "marketing_copy": 0.9558,
+        "news_article": 0.7567
+      }
+    }
+  ]
+}

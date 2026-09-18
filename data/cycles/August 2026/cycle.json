@@ -1,0 +1,22 @@
+{
+  "cycle": "August 2026",
+  "counts": {
+    "samples": 33,
+    "tests": 231,
+    "detector_scores": 1155,
+    "humanizers": 7,
+    "detectors": 5
+  },
+  "files": {
+    "leaderboard.json": "7eb7e63bc91267639a1447d74338dc2a03ae489e2126f88bbfe2ce710b011495",
+    "nonce.txt": "019abd0dbb5f76b2155e9212220f0fd345a8d76ea6c1503433c7c2a305a4cd1b",
+    "prompts.json": "2c8e1a8fdb911e4dd4846a6d9b61d0467b7322aa9871adcaa20fe05cf33a04d1",
+    "templates.json": "58f06afb039800616ae8d5b4549918fee72da909d0b96c10562d02e4a5d14aab",
+    "banks.json": "d519e94db3f7f1e57a75780990046140aca36289648ff22237bdb8fa16962fa4",
+    "select-placeholders.js": "f8bae5461a7c6c1a7315c2a17e4eb85eabeddbe9d0c17502dc5e4a04d9c9d80f",
+    "samples.json": "64409610fe7c3b00a40978ac495046f489ddb7e004353628a9d670be852eb068",
+    "tests.json": "3cdee6fabb601635cef6e61ea16365f6405a15a75c17b59b084f3bfcb3791dfc",
+    "detector-scores.json": "e26810cb09dcb04509e62e7871311f0644e50856800896c5fef412d29543b1c2",
+    "scoring.js": "240f6f6131923c8f6597f56bc34f8d8f5b50a3f091f4a56a5ee73829958218d0"
+  }
+}
