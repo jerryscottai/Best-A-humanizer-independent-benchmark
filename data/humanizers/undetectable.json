@@ -9,6 +9,13 @@
   },
   "points": [
     {
+      "cycle": "October 2026",
+      "composite": 90.0,
+      "bypass_rate": 0.92,
+      "results_only": true,
+      "methodology_version": "2.0.0-results-only"
+    },
+    {
       "cycle": "August 2026",
       "composite": 82.53,
       "bypass_rate": 0.82,

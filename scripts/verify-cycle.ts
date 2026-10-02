@@ -33,6 +33,12 @@
  * Usage:
  *   tsx scripts/verify-cycle.ts <cycle>     # verify one cycle
  *   tsx scripts/verify-cycle.ts --all       # verify every cycle directory
+ *
+ * Results-only cycles (cycle.json sets `"results_only": true` or
+ * `"reproducible": false`) publish a leaderboard without the raw bundle, so
+ * the hash-commitment, replay and manifest checks are skipped. They still get
+ * a structural check: leaderboard.json must exist, ranks must be 1..N, and
+ * each composite must equal the equal-weight mean of its dimension scores.
  */
 
 import fs from "node:fs/promises";
@@ -522,9 +528,54 @@ async function verifyReproducibility(
   return { errors, humanizerCount: replay.humanizers.length, skipped: false };
 }
 
+async function isResultsOnly(dir: string): Promise<boolean> {
+  const p = path.join(dir, "cycle.json");
+  if (!(await fileExists(p))) return false;
+  try {
+    const meta = await readJson<{ results_only?: boolean; reproducible?: boolean }>(p);
+    return meta.results_only === true || meta.reproducible === false;
+  } catch {
+    return false;
+  }
+}
+
+async function verifyResultsOnly(cycleName: string, dir: string): Promise<string[]> {
+  const errors: string[] = [];
+  const p = path.join(dir, "leaderboard.json");
+  if (!(await fileExists(p))) {
+    return [`${cycleName}: results-only cycle is missing leaderboard.json`];
+  }
+  const lb = await readJson<{
+    humanizers?: Array<{ slug: string; rank: number; scores: Record<string, number> }>;
+  }>(p);
+  const rows = lb.humanizers ?? [];
+  if (rows.length === 0) errors.push(`${cycleName}: leaderboard.json has no humanizers`);
+  rows.forEach((h, i) => {
+    if (h.rank !== i + 1) {
+      errors.push(`${cycleName}: ${h.slug} has rank ${h.rank}, expected ${i + 1}`);
+    }
+    const { composite, ...dims } = h.scores;
+    const values = Object.values(dims);
+    const mean = (values.reduce((a, b) => a + b, 0) / values.length) * 100;
+    if (Math.abs(mean - composite) > 0.06) {
+      errors.push(
+        `${cycleName}: ${h.slug} composite ${composite} != mean of dimensions ${mean.toFixed(2)}`,
+      );
+    }
+  });
+  if (errors.length === 0) {
+    console.log(
+      `[skip] ${cycleName}: results-only cycle (${rows.length} humanizers, not independently verifiable)`,
+    );
+  }
+  return errors;
+}
+
 async function verifyCycle(cycleName: string): Promise<string[]> {
   const errors: string[] = [];
   const dir = path.join(CYCLES_DIR, cycleName);
+
+  if (await isResultsOnly(dir)) return verifyResultsOnly(cycleName, dir);
 
   const transparency = await verifyTransparency(cycleName, dir);
   errors.push(...transparency.errors);

@@ -1,24 +1,47 @@
 # AI Humanizer Benchmark: Rankings & Public Audit Record
 
-**The best AI humanizers, ranked by a monthly benchmark.** This benchmark measures how well each AI humanizer bypasses the major AI detectors (GPTZero, Originality.ai, Copyleaks, Winston AI, and ZeroGPT) while preserving the original meaning and readability. We pay for every tool ourselves and run each one by hand on the most undetectable setting it advertises; there are no affiliate deals and no vendor-supplied numbers. Every input, every humanized output, every detector verdict, and the scoring code itself is published in this repository, so anyone can reproduce the rankings from scratch.
+**The best AI humanizers, ranked by a monthly benchmark.** This benchmark measures how well each AI humanizer bypasses the major AI detectors (GPTZero, Originality.ai, Copyleaks, Winston AI, and ZeroGPT) while preserving the original meaning and readability. We pay for every tool ourselves and run each one by hand on the most undetectable setting it advertises; there are no affiliate deals and no vendor-supplied numbers. For the June–August 2026 cycles, every input, every humanized output, every detector verdict, and the scoring code itself is published in this repository, so anyone can reproduce those rankings from scratch. October 2026 is a [results-only cycle](#results-only-cycles).
 
 <!-- RANKINGS:START -->
-## 🏆 Best AI humanizers: August 2026
+## 🏆 Best AI humanizers: October 2026
 
-| # | AI humanizer | Score / 100 | Bypass | Meaning | Readability | Consistency | Penalty | Standout |
-|--:|--------------|:-----------:|:------:|:-------:|:-----------:|:-----------:|:-------:|----------|
-| 1 | [GPTHuman AI](data/humanizers/gpthuman.json) | 88.28 | 94% | 77% | 91% | 96% | 0 | Best overall writing quality |
-| 2 | [Undetectable.ai](data/humanizers/undetectable.json) | 82.53 | 82% | 87% | 69% | 93% | 0 | Best meaning and length preservation |
-| 3 | [WriteHuman](data/humanizers/writehuman.json) | 76.60 | 84% | 66% | 77% | 90% | -1.0 | Best concise rewrite |
-| 4 | [NoteGPT](data/humanizers/notegpt.json) | 69.79 | 88% | 60% | 78% | 91% | -8.0 | Most conversational rewrite |
-| 5 | [ZeroGPT Humanizer](data/humanizers/zerogpt-humanizer.json) | 65.35 | 76% | 66% | 45% | 71% | -2.0 | Good fidelity, weak grammar |
-| 6 | [UnAIMyText](data/humanizers/unaimytext.json) | 60.64 | 72% | 56% | 42% | 86% | -3.0 | Verbose and inconsistent |
-| 7 | [HIX Bypass](data/humanizers/hix-bypass.json) | 52.42 | 70% | 47% | 39% | 89% | -7.0 | Most editing required |
+| # | AI humanizer | Score / 100 | Detector bypass | Meaning | Natural writing | Consistency | Factual reliability |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | GPTHuman AI | 96.2 | 98% | 96% | 95% | 95% | 97% |
+| 2 | Undetectable.ai | 90.0 | 92% | 90% | 89% | 88% | 91% |
+| 3 | StealthGPT | 89.4 | 95% | 87% | 91% | 86% | 88% |
+| 4 | HIX Bypass | 88.0 | 90% | 89% | 86% | 87% | 88% |
+| 5 | WriteHuman | 87.6 | 87% | 92% | 88% | 85% | 86% |
+| 6 | Stealth Writer | 85.8 | 85% | 88% | 89% | 82% | 85% |
+| 7 | BypassGPT | 85.4 | 93% | 82% | 84% | 85% | 83% |
+| 8 | Humanize AI Pro | 83.4 | 88% | 81% | 86% | 80% | 82% |
+| 9 | Phrasly | 83.2 | 83% | 85% | 84% | 83% | 81% |
+| 10 | GPTinf | 81.8 | 86% | 80% | 82% | 78% | 83% |
+| 11 | Humbot | 81.2 | 81% | 83% | 81% | 82% | 79% |
+| 12 | SupWriter | 79.2 | 79% | 80% | 83% | 76% | 78% |
+| 13 | Grammarly | 79.0 | 62% | 84% | 81% | 83% | 85% |
+| 14 | Twixify | 78.0 | 84% | 77% | 79% | 74% | 76% |
+| 15 | Uncheck AI | 77.6 | 77% | 81% | 78% | 77% | 75% |
+| 16 | BypassAI | 76.4 | 80% | 74% | 76% | 75% | 77% |
+| 17 | Undetected.ai | 75.0 | 78% | 75% | 77% | 72% | 73% |
+| 18 | ReHumanize | 74.6 | 74% | 78% | 74% | 73% | 74% |
+| 19 | AI Humanize io | 72.6 | 75% | 72% | 75% | 70% | 71% |
+| 20 | Humaniser | 72.0 | 72% | 74% | 73% | 69% | 72% |
+| 21 | AIUndetectable | 70.8 | 73% | 70% | 71% | 71% | 69% |
+| 22 | StealthBypass | 69.6 | 71% | 69% | 70% | 68% | 70% |
+| 23 | Penlify | 68.6 | 69% | 71% | 68% | 67% | 68% |
+| 24 | Super Humanizer | 67.0 | 68% | 67% | 69% | 65% | 66% |
 
-_The composite (out of 100) weights detector bypass (42%), meaning preservation (32%), readability (16%), and consistency across writing categories (10%); the Bypass, Meaning, Readability, and Consistency columns are those sub-scores. Penalty is the total points deducted for quality failures (meaning drift, length inflation or deflation, refusals, or output returned unchanged) — already reflected in the score. We pay for every tool ourselves and run each one by hand on its most undetectable advertised setting. Scored against 5 AI detectors; every score is reproducible from the data in this repo._
+*October 2026 is a **results-only** cycle. Rankings are published without the full source samples, per-test outputs, detector verdicts, or commit-reveal materials required for independent re-derivation. June–August 2026 cycles remain fully reproducible.*
+
+_Scores are out of 100 and are the equal-weight mean of the five dimension columns, as published in [`leaderboard.json`](data/cycles/October%202026/leaderboard.json). October uses a different methodology from June–August, so its scores are not directly comparable with earlier cycles._
 <!-- RANKINGS:END -->
 
-**GPTHuman AI takes the top spot for August 2026.** It was the only tool to combine the highest bypass rate in the field with clean, publication-quality prose — no obvious grammatical errors, logical paragraph structure, and genuine sentence-level variation rather than mechanical synonym replacement. It took no quality penalty at all. Undetectable.ai preserved the source more faithfully and hit the target length exactly, but two visible errors in a single short passage kept it in second.
+**GPTHuman AI also holds the top spot for October 2026**, ahead of Undetectable.ai and StealthGPT. October is published as a [results-only cycle](#results-only-cycles); the field-test notes below are from the fully reproducible August 2026 cycle.
+
+### August 2026 field test
+
+**GPTHuman AI took the top spot for August 2026.** It was the only tool to combine the highest bypass rate in the field with clean, publication-quality prose — no obvious grammatical errors, logical paragraph structure, and genuine sentence-level variation rather than mechanical synonym replacement. It took no quality penalty at all. Undetectable.ai preserved the source more faithfully and hit the target length exactly, but two visible errors in a single short passage kept it in second.
 
 The pattern across the field is a trade: the tools that rewrite most aggressively tend to drift or inflate, and the tools that stay closest to the source tend to read as edited rather than rewritten. Only the top two managed both at once.
 
@@ -68,9 +91,9 @@ The longest and least controlled rewrite among the lower-ranked results, expandi
 
 **Verdict:** Usable only as a starting point; every paragraph needed hands-on correction.
 
-> **A note on ZeroGPT.** ZeroGPT ships both an AI detector and a humanizer. The detector is one of the five this benchmark scores against (`zerogpt`); the humanizer is ranked above as `zerogpt-humanizer`. They are separate products and are never scored against each other.
+> **A note on ZeroGPT.** ZeroGPT ships both an AI detector and a humanizer. The detector is one of the five this benchmark scores against (`zerogpt`); the humanizer was ranked in August as `zerogpt-humanizer`. They are separate products and are never scored against each other.
 
-Per-detector breakdowns, per-category sub-scores, penalty details, and the full three-cycle history for every tool are in [`data/humanizers/`](data/humanizers/) and in each cycle's `leaderboard.json`.
+Per-detector breakdowns, per-category sub-scores, penalty details, and the cycle history for every tool are in [`data/humanizers/`](data/humanizers/) and in each cycle's `leaderboard.json`.
 
 ## What's in here
 
@@ -102,13 +125,17 @@ CHANGES.md                     # cycle-to-cycle methodology changelog
 
 The benchmark itself runs from a separate private repo (corpus generation, detector integrations, humanizer adapters, API keys). This public repo receives every input, every output, every detector verdict, and a frozen copy of the scoring algorithm each cycle produces, enough that anyone can **re-derive the leaderboard from scratch**, not just spot-check it.
 
+## Results-only cycles
+
+October 2026 publishes the ranked results only. Its commit-reveal materials, source samples, per-test outputs, and detector verdicts are not included, so **it cannot be independently re-derived**. Its `cycle.json` sets `"results_only": true`; the verifier skips the hash-commitment, replay, and manifest checks for such cycles and only confirms that the published ranks and composites are internally consistent. June, July, and August 2026 remain fully reproducible. See [`CHANGES.md`](CHANGES.md).
+
 ## How to verify a cycle
 
 ```bash
 git clone https://github.com/jerryscottai/Best-A-humanizer-independent-benchmark.git
 cd Best-A-humanizer-independent-benchmark
 npm install
-npm run verify                                   # verify every published cycle
+npm run verify                                   # verify every cycle (results-only cycles are skipped)
 npx tsx scripts/verify-cycle.ts "August 2026"    # verify one cycle
 ```
 
@@ -135,7 +162,7 @@ The script runs five separate checks for each cycle:
 4. **Manifest integrity.** For every entry in `cycle.json.files`, recomputes the SHA-256 of the named file and asserts it matches the manifest. The four reproducibility data files (`samples.json`, `tests.json`, `detector-scores.json`, `scoring.js`) are required-minimum entries; recent cycles also manifest the transparency bundle (`commit.json`, `nonce.txt`, `prompts.json`, `templates.json`, `banks.json`, `select-placeholders.js`) and the published `leaderboard.json`. Unknown filenames in the manifest are rejected. Catches truncated, corrupted, or doctored publishes.
 5. **Score replay.** Runs the frozen `scoring.js` against the raw data and asserts every humanizer's composite, sub-scores, detector breakdown, category breakdown, and penalty counts match `leaderboard.json` within `1e-4`.
 
-If all five pass for every cycle, no one (including the benchmark operator) could have altered the prompts, inputs, outputs, detector verdicts, or scoring math after the cycle started without breaking the chain.
+If all five pass for every reproducible cycle (June–August 2026), no one (including the benchmark operator) could have altered the prompts, inputs, outputs, detector verdicts, or scoring math after the cycle started without breaking the chain.
 
 The verifier is also wired into CI on this repo: every push to `main` runs `npm run verify` and fails the build if any cycle's chain has broken.
 

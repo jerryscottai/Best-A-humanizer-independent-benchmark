@@ -1,0 +1,18 @@
+{
+  "cycle": "October 2026",
+  "results_only": true,
+  "reproducible": false,
+  "sealed_at": "2026-10-01T18:42:00Z",
+  "methodology_version": "2.0.0-results-only",
+  "scoring_version": "2.0.0-results-only",
+  "counts": {
+    "humanizers": 24,
+    "samples": null,
+    "tests": null,
+    "detector_scores": null
+  },
+  "files": {
+    "leaderboard.json": null
+  },
+  "notes": "This cycle publishes ranked results only. The commit-reveal chain, select-placeholders algorithm, source samples, per-test outputs, and detector verdicts are not included. The verifier skips raw-data and hash-commitment checks for cycles marked results_only."
+}

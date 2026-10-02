@@ -6,6 +6,20 @@ with the rationale from the admin-side change log.
 
 ---
 
+## October 2026 (published 2026-10-02)
+
+Results-only cycle under methodology stamp `2.0.0-results-only`.
+
+- Rankings published for 24 tools.
+- Full transparency bundle (nonce commitment, placeholder selection, source samples, per-test outputs, detector verdicts) is **not** included.
+- This cycle is **not independently reproducible**. The verifier skips hash-commitment and raw-data checks for any cycle whose `cycle.json` sets `"results_only": true`, and only checks that ranks and composites in `leaderboard.json` are internally consistent.
+- Scores are not directly comparable with June–August: October reports five equal-weighted dimensions (detector bypass, meaning preservation, natural writing, consistency, factual reliability) on a different methodology.
+- June, July and August 2026 remain fully reproducible under methodology 1.4.0 / scoring 1.6.0.
+
+📦 [Results](data/cycles/October%202026/)
+
+---
+
 ## August 2026 (published 2026-08-03)
 
 No methodology, scoring, or prompt-set changes since the previous cycle.

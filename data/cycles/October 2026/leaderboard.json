@@ -1,0 +1,397 @@
+{
+  "cycle": "October 2026",
+  "generated_at": "2026-10-01T18:40:00Z",
+  "methodology_version": "2.0.0-results-only",
+  "scoring_version": "2.0.0-results-only",
+  "prompt_set_version": null,
+  "results_only": true,
+  "reproducible": false,
+  "description": "Results-only snapshot. Rankings published without the full transparency or raw-data bundles required for independent re-derivation. June\u2013August 2026 cycles remain fully reproducible under methodology 1.4.0 / scoring 1.6.0.",
+  "humanizers": [
+    {
+      "slug": "gpthuman",
+      "name": "GPTHuman AI",
+      "rank": 1,
+      "scores": {
+        "composite": 96.2,
+        "detector_bypass": 0.98,
+        "meaning_preservation": 0.96,
+        "natural_writing": 0.95,
+        "consistency": 0.95,
+        "factual_reliability": 0.97
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "undetectable",
+      "name": "Undetectable.ai",
+      "rank": 2,
+      "scores": {
+        "composite": 90.0,
+        "detector_bypass": 0.92,
+        "meaning_preservation": 0.9,
+        "natural_writing": 0.89,
+        "consistency": 0.88,
+        "factual_reliability": 0.91
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "stealthgpt",
+      "name": "StealthGPT",
+      "rank": 3,
+      "scores": {
+        "composite": 89.4,
+        "detector_bypass": 0.95,
+        "meaning_preservation": 0.87,
+        "natural_writing": 0.91,
+        "consistency": 0.86,
+        "factual_reliability": 0.88
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "hix-bypass",
+      "name": "HIX Bypass",
+      "rank": 4,
+      "scores": {
+        "composite": 88.0,
+        "detector_bypass": 0.9,
+        "meaning_preservation": 0.89,
+        "natural_writing": 0.86,
+        "consistency": 0.87,
+        "factual_reliability": 0.88
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "writehuman",
+      "name": "WriteHuman",
+      "rank": 5,
+      "scores": {
+        "composite": 87.6,
+        "detector_bypass": 0.87,
+        "meaning_preservation": 0.92,
+        "natural_writing": 0.88,
+        "consistency": 0.85,
+        "factual_reliability": 0.86
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "stealth-writer",
+      "name": "Stealth Writer",
+      "rank": 6,
+      "scores": {
+        "composite": 85.8,
+        "detector_bypass": 0.85,
+        "meaning_preservation": 0.88,
+        "natural_writing": 0.89,
+        "consistency": 0.82,
+        "factual_reliability": 0.85
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "bypassgpt",
+      "name": "BypassGPT",
+      "rank": 7,
+      "scores": {
+        "composite": 85.4,
+        "detector_bypass": 0.93,
+        "meaning_preservation": 0.82,
+        "natural_writing": 0.84,
+        "consistency": 0.85,
+        "factual_reliability": 0.83
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "humanize-ai-pro",
+      "name": "Humanize AI Pro",
+      "rank": 8,
+      "scores": {
+        "composite": 83.4,
+        "detector_bypass": 0.88,
+        "meaning_preservation": 0.81,
+        "natural_writing": 0.86,
+        "consistency": 0.8,
+        "factual_reliability": 0.82
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "phrasly",
+      "name": "Phrasly",
+      "rank": 9,
+      "scores": {
+        "composite": 83.2,
+        "detector_bypass": 0.83,
+        "meaning_preservation": 0.85,
+        "natural_writing": 0.84,
+        "consistency": 0.83,
+        "factual_reliability": 0.81
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "gptinf",
+      "name": "GPTinf",
+      "rank": 10,
+      "scores": {
+        "composite": 81.8,
+        "detector_bypass": 0.86,
+        "meaning_preservation": 0.8,
+        "natural_writing": 0.82,
+        "consistency": 0.78,
+        "factual_reliability": 0.83
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "humbot",
+      "name": "Humbot",
+      "rank": 11,
+      "scores": {
+        "composite": 81.2,
+        "detector_bypass": 0.81,
+        "meaning_preservation": 0.83,
+        "natural_writing": 0.81,
+        "consistency": 0.82,
+        "factual_reliability": 0.79
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "supwriter",
+      "name": "SupWriter",
+      "rank": 12,
+      "scores": {
+        "composite": 79.2,
+        "detector_bypass": 0.79,
+        "meaning_preservation": 0.8,
+        "natural_writing": 0.83,
+        "consistency": 0.76,
+        "factual_reliability": 0.78
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "grammarly",
+      "name": "Grammarly",
+      "rank": 13,
+      "scores": {
+        "composite": 79.0,
+        "detector_bypass": 0.62,
+        "meaning_preservation": 0.84,
+        "natural_writing": 0.81,
+        "consistency": 0.83,
+        "factual_reliability": 0.85
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "twixify",
+      "name": "Twixify",
+      "rank": 14,
+      "scores": {
+        "composite": 78.0,
+        "detector_bypass": 0.84,
+        "meaning_preservation": 0.77,
+        "natural_writing": 0.79,
+        "consistency": 0.74,
+        "factual_reliability": 0.76
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "uncheck-ai",
+      "name": "Uncheck AI",
+      "rank": 15,
+      "scores": {
+        "composite": 77.6,
+        "detector_bypass": 0.77,
+        "meaning_preservation": 0.81,
+        "natural_writing": 0.78,
+        "consistency": 0.77,
+        "factual_reliability": 0.75
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "bypassai",
+      "name": "BypassAI",
+      "rank": 16,
+      "scores": {
+        "composite": 76.4,
+        "detector_bypass": 0.8,
+        "meaning_preservation": 0.74,
+        "natural_writing": 0.76,
+        "consistency": 0.75,
+        "factual_reliability": 0.77
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "undetected",
+      "name": "Undetected.ai",
+      "rank": 17,
+      "scores": {
+        "composite": 75.0,
+        "detector_bypass": 0.78,
+        "meaning_preservation": 0.75,
+        "natural_writing": 0.77,
+        "consistency": 0.72,
+        "factual_reliability": 0.73
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "rehumanize",
+      "name": "ReHumanize",
+      "rank": 18,
+      "scores": {
+        "composite": 74.6,
+        "detector_bypass": 0.74,
+        "meaning_preservation": 0.78,
+        "natural_writing": 0.74,
+        "consistency": 0.73,
+        "factual_reliability": 0.74
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "ai-humanize-io",
+      "name": "AI Humanize io",
+      "rank": 19,
+      "scores": {
+        "composite": 72.6,
+        "detector_bypass": 0.75,
+        "meaning_preservation": 0.72,
+        "natural_writing": 0.75,
+        "consistency": 0.7,
+        "factual_reliability": 0.71
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "humaniser",
+      "name": "Humaniser",
+      "rank": 20,
+      "scores": {
+        "composite": 72.0,
+        "detector_bypass": 0.72,
+        "meaning_preservation": 0.74,
+        "natural_writing": 0.73,
+        "consistency": 0.69,
+        "factual_reliability": 0.72
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "aiundetectable",
+      "name": "AIUndetectable",
+      "rank": 21,
+      "scores": {
+        "composite": 70.8,
+        "detector_bypass": 0.73,
+        "meaning_preservation": 0.7,
+        "natural_writing": 0.71,
+        "consistency": 0.71,
+        "factual_reliability": 0.69
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "stealthbypass",
+      "name": "StealthBypass",
+      "rank": 22,
+      "scores": {
+        "composite": 69.6,
+        "detector_bypass": 0.71,
+        "meaning_preservation": 0.69,
+        "natural_writing": 0.7,
+        "consistency": 0.68,
+        "factual_reliability": 0.7
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "penlify",
+      "name": "Penlify",
+      "rank": 23,
+      "scores": {
+        "composite": 68.6,
+        "detector_bypass": 0.69,
+        "meaning_preservation": 0.71,
+        "natural_writing": 0.68,
+        "consistency": 0.67,
+        "factual_reliability": 0.68
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    },
+    {
+      "slug": "super-humanizer",
+      "name": "Super Humanizer",
+      "rank": 24,
+      "scores": {
+        "composite": 67.0,
+        "detector_bypass": 0.68,
+        "meaning_preservation": 0.67,
+        "natural_writing": 0.69,
+        "consistency": 0.65,
+        "factual_reliability": 0.66
+      },
+      "penalties_applied": [],
+      "sample_count": null,
+      "note": "results-only cycle; raw artifacts not published"
+    }
+  ],
+  "unavailable_humanizers": []
+}
