@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Student essay short</title>
+<style>
+@font-face{font-family:'Figtree';font-weight:400;src:url(assets/fonts/figtree-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Figtree';font-weight:500;src:url(assets/fonts/figtree-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Figtree';font-weight:600;src:url(assets/fonts/figtree-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Figtree';font-weight:700;src:url(assets/fonts/figtree-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Figtree';font-weight:800;src:url(assets/fonts/figtree-latin-800-normal.woff2) format('woff2')}
+:root{--amber:#F5B544;--cream:#FAF7F2;--ink:#14161c;--green:#16a34a;--bg:#0b0d12}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;background:#000;overflow:hidden;font-family:'Figtree',sans-serif}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--bg)}
+#glow{position:absolute;inset:0}
+.el{position:absolute;opacity:0;display:none}
+.card{position:absolute;left:70px;width:940px;background:var(--cream);border-radius:36px;padding:44px;color:var(--ink);box-shadow:0 30px 90px rgba(0,0,0,.55),0 0 130px rgba(245,181,68,.12)}
+.lbl{display:inline-flex;align-items:center;gap:12px;font:700 24px Figtree;letter-spacing:.06em;text-transform:uppercase;color:#6b7080;margin-bottom:24px}
+.lbl i{width:14px;height:14px;border-radius:50%;background:var(--amber);display:block}
+.txt{font:500 30px/1.5 Figtree;color:var(--ink);white-space:pre-wrap}
+.hl{background-image:linear-gradient(rgba(245,181,68,.45),rgba(245,181,68,.45));background-repeat:no-repeat;background-position:0 100%;background-size:0% 100%;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hl.g{background-image:linear-gradient(rgba(22,163,74,.28),rgba(22,163,74,.28))}
+.hl.b{background-image:linear-gradient(rgba(79,124,255,.28),rgba(79,124,255,.28))}
+.hl.r{background-image:linear-gradient(rgba(240,98,98,.28),rgba(240,98,98,.28))}
+.pill{position:absolute;font:700 26px Figtree;color:#fff;border-radius:999px;padding:12px 26px;white-space:nowrap}
+/* presenter placeholder */
+.pres{position:absolute;left:70px;width:940px;border-radius:36px;overflow:hidden;background:linear-gradient(165deg,#22262f,#3a3226 60%,#1a1c22);box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 110px rgba(245,181,68,.15),0 0 0 2px rgba(255,255,255,.12)}
+.pres .shelf{position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(0,0,0,.2) 0 6px,transparent 6px 60px)}
+.pres .head{position:absolute;left:50%;top:22%;width:26%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:#d9b394}
+.pres .body{position:absolute;left:50%;top:52%;width:52%;height:46%;transform:translateX(-50%);border-radius:50% 50% 0 0/36% 36% 0 0;background:#8d9a8b}
+.pres .tag{position:absolute;left:22px;top:20px;font:700 20px Figtree;letter-spacing:.08em;color:#fff;background:rgba(0,0,0,.55);padding:8px 14px;border-radius:999px}
+.pres img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:none}
+.pres.live .tag{display:none}
+/* tracker */
+#tracker{left:70px;top:64px;width:940px;height:84px}
+.tpill{position:absolute;top:0;height:84px;border-radius:999px;font:700 30px/84px Figtree;letter-spacing:.04em;text-align:center;background:rgba(255,255,255,.07);color:#8a8f9e;border:2px solid rgba(255,255,255,.1)}
+.tpill.on{background:var(--amber);color:#1a1405;border-color:var(--amber);box-shadow:0 0 50px rgba(245,181,68,.4)}
+/* prompt bar */
+#pbar{left:70px;top:1440px;width:940px;height:120px;border-radius:60px;background:#171a22;border:2px solid #2b303c;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+#pbtxt{position:absolute;left:44px;top:0;height:120px;font:500 34px/120px Figtree;color:#eef0f5;white-space:nowrap}
+#pbsend{position:absolute;right:20px;top:20px;width:80px;height:80px;border-radius:50%;background:#eef0f5;color:#14161c;text-align:center;font:700 40px/80px Figtree}
+/* big words */
+.big{left:0;width:1080px;text-align:center;color:#fff;font:800 120px/1.05 Figtree;letter-spacing:-.02em}
+.bigw{left:140px;width:800px;height:170px;border-radius:40px;text-align:center;font:800 76px/170px Figtree;letter-spacing:.03em}
+/* UI */
+#ui{left:70px;top:190px;width:940px;height:1520px;background:#F4F5F8;border-radius:36px;box-shadow:0 30px 90px rgba(0,0,0,.55),0 0 150px rgba(245,181,68,.14);color:#1a1d27;overflow:hidden}
+#ui .h{position:absolute;font:600 24px Figtree;color:#4b5060}
+#chips{position:absolute;left:36px;top:70px;width:868px;height:80px;border-radius:20px;background:#e9ebf0;display:flex;padding:8px;gap:8px}
+#chips div{flex:1;border-radius:14px;text-align:center;font:600 26px/64px Figtree;color:#5a6075}
+#chips div.on{background:#fff;color:#14161c;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+#track{position:absolute;left:36px;top:218px;width:868px;height:8px;border-radius:4px;background:#dcdfe6}
+#fill{position:absolute;left:0;top:0;width:434px;height:8px;border-radius:4px;background:#14161c}
+#knob{position:absolute;left:434px;top:-12px;width:32px;height:32px;margin-left:-16px;border-radius:50%;background:#fff;border:5px solid #14161c}
+.ml{position:absolute;top:244px;font:500 22px Figtree;color:#8a90a2}
+#inbox{position:absolute;left:36px;top:360px;width:868px;height:400px;border-radius:22px;background:#fff;border:2px solid #e2e5ec;padding:24px;font:400 25px/1.45 Figtree;color:#2a2f40;white-space:pre-wrap;overflow:hidden}
+#hbtn{position:absolute;left:688px;top:790px;width:216px;height:76px;border-radius:20px;background:#14161c;color:#fff;text-align:center;font:700 28px/76px Figtree}
+.score{position:absolute;top:910px;width:276px;height:132px;border-radius:24px;background:#fff;border:2px solid #e2e5ec;opacity:0}
+.score .ic{position:absolute;left:20px;top:36px;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.score .nm{position:absolute;left:96px;top:26px;font:600 22px Figtree;color:#4b5060;white-space:nowrap}
+.score .v{position:absolute;left:96px;top:58px;font:800 40px Figtree;white-space:nowrap}
+#outbox{position:absolute;left:36px;top:1070px;width:868px;height:400px;border-radius:22px;background:#fff;border:2px solid #e2e5ec;padding:24px;font:400 25px/1.45 Figtree;color:#2a2f40;white-space:pre-wrap;overflow:hidden}
+#skel{position:absolute;left:36px;top:1070px;width:868px;height:400px;border-radius:22px;background:#fff;border:2px solid #e2e5ec;padding:34px 24px;opacity:0}
+#skel i{display:block;height:20px;border-radius:10px;margin-bottom:26px;background:linear-gradient(90deg,#eef0f4 0%,#f8f9fb 50%,#eef0f4 100%);background-size:200% 100%}
+.flt{position:absolute;font:700 20px Figtree;border-radius:999px;padding:4px 16px;white-space:nowrap;opacity:0}
+#cursor{position:absolute;width:46px;height:46px;z-index:60;opacity:0}
+#rip{position:absolute;width:70px;height:70px;border-radius:50%;border:5px solid rgba(245,181,68,.9);opacity:0;z-index:59}
+/* chips under prompt card */
+.wchip{position:absolute;font:700 28px Figtree;color:#fff;border-radius:999px;padding:14px 30px;white-space:nowrap}
+#quote{left:70px;top:1490px;width:940px;text-align:center;font:800 58px/1.18 Figtree;color:#fff;letter-spacing:-.01em}
+#quote span{display:inline-block;opacity:0}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="glow"></div>
+
+  <div id="tracker" class="el">
+    <div class="tpill" id="t1" style="left:0;width:440px">1 &nbsp;CONTEXT</div>
+    <div class="tpill" id="t2" style="left:500px;width:440px">2 &nbsp;GPTHUMAN.AI</div>
+    <div style="position:absolute;left:446px;top:0;width:48px;height:84px;text-align:center;font:700 40px/84px Figtree;color:#8a8f9e">&rsaquo;</div>
+  </div>
+
+  <!-- presenter 1 -->
+  <div class="pres el" id="p1" style="top:150px;height:760px"><div class="shelf"></div><div class="head"></div><div class="body"></div><img id="p1img"><div class="tag">STUDENT HOOK CLIP</div></div>
+
+  <!-- chatgpt draft -->
+  <div class="card el" id="mail" style="top:960px;">
+    <div class="lbl"><i></i>ChatGPT draft</div>
+    <div class="txt" id="mailtxt"></div>
+    <div class="pill" id="tagA" style="left:44px;bottom:-84px;background:#e0902b;opacity:0">Stock phrase</div>
+    <div class="pill" id="tagB" style="left:352px;bottom:-84px;background:#e0902b;opacity:0">Rule of three</div>
+    <div id="shine" style="position:absolute;inset:0;border-radius:36px;background:#fff;opacity:0"></div>
+  </div>
+
+  <!-- chat prompt bar -->
+  <div class="el" id="pbar"><div id="pbtxt"></div><div id="pbsend">&uarr;</div></div>
+  <div class="pill el" id="samepill" style="left:70px;top:1330px;background:#2b303c;font-size:30px;padding:16px 34px">Still the same draft</div>
+
+  <!-- big words -->
+  <div class="big el" id="big1" style="top:790px">Do this<br>instead.</div>
+  <div class="pill el" id="two" style="left:420px;top:690px;background:#2b303c;font-size:32px">TWO STEPS</div>
+  <div class="bigw el" id="bwC" style="top:760px;background:var(--amber);color:#1a1405">CONTEXT</div>
+  <div class="el" id="barr" style="left:0;top:945px;width:1080px;text-align:center;font:700 80px Figtree;color:#8a8f9e">&darr;</div>
+  <div class="bigw el" id="bwH" style="top:1090px;background:#fff;color:#14161c">GPTHUMAN.AI</div>
+
+  <!-- step 1 prompt card -->
+  <div class="card el" id="pcard" style="top:260px">
+    <div class="lbl"><i></i>Your prompt to ChatGPT</div>
+    <div class="txt" id="ptxt" style="font-size:34px"></div>
+  </div>
+  <div class="wchip el" id="w1" style="left:70px;top:770px;background:#e0902b">Your class</div>
+  <div class="wchip el" id="w2" style="left:70px;top:860px;background:#2f6bff">Your topic</div>
+  <div class="wchip el" id="w3" style="left:70px;top:950px;background:#16a34a">Your level</div>
+
+  <!-- step 2 UI -->
+  <div class="el" id="ui">
+    <div class="h" style="left:36px;top:28px">Tone</div>
+    <div id="chips"><div>Standard</div><div>High School</div><div>College</div><div class="on">PhD</div></div>
+    <div class="h" style="left:36px;top:178px">Mode</div>
+    <div id="track"><div id="fill"></div><div id="knob"></div></div>
+    <div class="ml" style="left:36px">Professional</div><div class="ml" style="left:430px;color:#14161c;font-weight:700">Balanced</div><div class="ml" style="right:36px">Enhanced</div>
+    <div class="h" style="left:36px;top:318px">Text to humanize</div>
+    <div id="inbox"></div>
+    <div id="hbtn">Humanize</div>
+    <div class="score" id="sc0" style="left:36px"><div class="ic" style="background:#e1f6ea"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"><path d="M12 4a8 8 0 0 0-8 8v2"/><path d="M12 8a4 4 0 0 0-4 4c0 3 .5 5 1.5 7"/><path d="M12 12v1c0 2.5.5 4.5 1.5 6.5"/><path d="M16 12a4 4 0 0 0-.5-2"/><path d="M20 12a8 8 0 0 0-3-6.2"/><path d="M20 15c0 1.5-.2 3-.6 4"/></svg></div><div class="nm">Human Score</div><div class="v" id="v0" style="color:#16a34a">0%</div></div>
+    <div class="score" id="sc1" style="left:332px"><div class="ic" style="background:#e0ebff"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linejoin="round"><path d="M12 6c-1.8-1.3-4.5-1.8-8-1.5v13c3.5-.3 6.2.2 8 1.5 1.8-1.3 4.5-1.8 8-1.5v-13c-3.5-.3-6.2.2-8 1.5z"/><path d="M12 6v13"/></svg></div><div class="nm">Readability</div><div class="v" id="v1" style="color:#2563eb">0</div></div>
+    <div class="score" id="sc2" style="left:628px"><div class="ic" style="background:#f1e4ff"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.5-5.8L20 8.5"/><path d="M20 4v4.5h-4.5"/><path d="M20 12a8 8 0 0 1-13.5 5.8L4 15.5"/><path d="M4 20v-4.5h4.5"/></svg></div><div class="nm">Similarity</div><div class="v" id="v2" style="color:#9333ea">0%</div></div>
+    <div id="outbox"></div>
+    <div id="skel"><i style="width:92%"></i><i style="width:100%"></i><i style="width:76%"></i><i style="width:96%"></i><i style="width:58%"></i><i style="width:90%"></i><i style="width:100%"></i><i style="width:70%"></i></div>
+    <div class="flt" id="fB" style="background:#f06262;color:#fff">before</div>
+    <div class="flt" id="fA" style="background:#16a34a;color:#fff">after</div>
+  </div>
+  <div id="rip"></div>
+  <svg id="cursor" viewBox="0 0 24 24"><path d="M3 2l7 19 3-8 8-3z" fill="#111" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+
+  <!-- closing -->
+  <div class="pres el" id="p6" style="top:130px;height:760px"><div class="shelf"></div><div class="head"></div><div class="body"></div><img id="p6img"><div class="tag">STUDENT CLOSING CLIP</div></div>
+  <div class="card el" id="out2" style="top:925px">
+    <div class="lbl"><i style="background:#16a34a"></i>Humanized</div>
+    <div class="txt" id="out2txt" style="font-size:25px;line-height:1.5"></div>
+    <div id="sweep" style="position:absolute;left:30px;right:30px;top:90px;height:44px;border-radius:12px;background:rgba(245,181,68,.28);opacity:0"></div>
+  </div>
+  <div class="el" id="quote"></div>
+</div>
+
+<script src="cues.js"></script>
+<script>
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const prog=(t,a,b)=>clamp((t-a)/(b-a));
+const eio=p=>p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;
+const eout=p=>1-Math.pow(1-p,3);
+const lerp=(a,b,p)=>a+(b-a)*p;
+const $=id=>document.getElementById(id);
+const esc=x=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+/* cues.js (written by retime.py) sets window.CUES = {n6: closing-line start, D: closing length, total}. Defaults = Draft 2 timing. */
+const CUES=Object.assign({n6:40.3,D:7.2,total:47.5,quote:null},window.CUES||{});
+const TOTAL=CUES.total;
+const ANCH_NEW=[0,6.9,15.4,21.9,30.4,CUES.n6,CUES.n6+CUES.D],ANCH_OLD=[0,6.9,15.4,21.9,30.4,40.3,47.5];
+function warp(t){for(let i=1;i<ANCH_NEW.length;i++){if(t<=ANCH_NEW[i]||i===ANCH_NEW.length-1){const p=(t-ANCH_NEW[i-1])/(ANCH_NEW[i]-ANCH_NEW[i-1]);return ANCH_OLD[i-1]+p*(ANCH_OLD[i]-ANCH_OLD[i-1])}}}
+const HAVE_P1=true,HAVE_P6=true; /* flip when presenter frames exist */
+
+/* ---------- real copy ---------- */
+/* REAL: Washington ChatGPT draft + GPT Human output (from the demo run). MINE: tags, step-1 prompt text, quote */
+const MAIL_SEGS=[
+ "George Washington was ",
+ {id:'hA',cls:'',t:"one of the most important figures in American history."},
+ " He was the first president of the United States and played a major role in helping the country gain independence from Great Britain. Washington is often called the “Father of His Country” because of his leadership during the American Revolution and his contributions to establishing the United States government. ",
+ {id:'hB',cls:'',t:"His courage, determination, and commitment"},
+ " to his country made him ",
+ {id:'hC',cls:'',t:"one of America's most respected historical figures."}];
+const PROMPT_SEGS=[
+ "Write a short essay for my ",
+ {id:'pw',cls:'',t:"US history class"},
+ ". ",
+ {id:'pt',cls:'b',t:"The topic is George Washington."},
+ " ",
+ {id:'pn',cls:'g',t:"Keep it to about 80 words, in a clear academic tone."},
+ " Do not invent quotes or facts."];
+const MAIL_PLAIN=MAIL_SEGS.map(s=>typeof s==='string'?s:s.t).join('');
+const INPUT_TXT=MAIL_PLAIN;
+const REAL_S1="Few figures in American history are as consequential as George Washington.";
+const REAL_S2=" As the nation’s first president and a key player in the struggle for independence from Great Britain, he is widely regarded as one of America’s most respected historical personages.";
+const REAL_S3=" His courage and unwavering commitment to his country have earned him the title “Father of His Country,” a moniker that speaks to his leadership in the Revolution and in putting the United States government on its feet.";
+const OUT_SEGS=[{id:'oA',cls:'g',t:REAL_S1},REAL_S2+REAL_S3];
+const OUT_PLAIN=OUT_SEGS.map(s=>typeof s==='string'?s:s.t).join('');
+const INPUT_SEGS=[
+ "George Washington was ",
+ {id:'iA',cls:'r',t:"one of the most important figures in American history."},
+ MAIL_PLAIN.slice("George Washington was one of the most important figures in American history.".length)];
+const VALS=[92.82,48.8,95.6];
+const QUOTE=CUES.quote||"Sounds like a person wrote it.";
+
+/* segment renderer: reveals n chars, no reflow, per-id highlight progress */
+function segHTML(segs,n,hp){
+  let used=0,h='';
+  segs.forEach(sg=>{
+    const t=typeof sg==='string'?sg:sg.t;
+    const take=clamp(n-used,0,t.length);used+=t.length;
+    const vis=esc(t.slice(0,take)),hid='<span style="visibility:hidden">'+esc(t.slice(take))+'</span>';
+    if(typeof sg==='string')h+=vis+hid;
+    else{const p=(hp&&hp[sg.id])||0;h+=`<span class="hl ${sg.cls}" style="background-size:${p*100}% 100%">${vis}${hid}</span>`}
+  });
+  return h;
+}
+const FULL=s=>s.reduce((a,x)=>a+(typeof x==='string'?x.length:x.t.length),0);
+function typedN(t,start,cps,len){return Math.floor(clamp((t-start)*cps,0,len))}
+
+function show(el,o,x=0,y=0,s=1){
+  o=clamp(o);
+  el.style.opacity=o;
+  el.style.display=o<=.001?'none':'block';
+  el.style.transform=`translate(${x}px,${y}px) scale(${s})`;
+}
+function bgGlow(t){
+  const a=.16+.04*Math.sin(t*.7);
+  $('glow').style.background=`radial-gradient(900px 800px at ${25+8*Math.sin(t*.3)}% ${15+6*Math.cos(t*.25)}%, rgba(245,181,68,${a*.55}), transparent 70%), radial-gradient(900px 800px at ${85+5*Math.cos(t*.2)}% 85%, rgba(80,110,255,${a*.6}), transparent 70%), #0b0d12`;
+}
+
+/* ---------- placement of floating before/after labels (measured once) ---------- */
+let measured=false;
+function measure(){
+  $('ui').style.display='block';$('ui').style.opacity=1;$('ui').style.transform='none';
+  $('inbox').innerHTML=segHTML(INPUT_SEGS,9999,{iA:1});
+  $('outbox').innerHTML=segHTML(OUT_SEGS,9999,{oA:1});
+  const ui=$('ui').getBoundingClientRect();
+  const a=$('inbox').querySelector('.hl').getBoundingClientRect(),b=$('outbox').querySelector('.hl').getBoundingClientRect();
+  window.POS={bx:a.left-ui.left,by:a.top-ui.top-46,ax:b.left-ui.left,ay:b.top-ui.top-46};
+  $('ui').style.display='none';$('ui').style.opacity=0;
+  measured=true;
+}
+
+window.__render=async function(T){
+  const t=warp(T);
+  if(!measured){await document.fonts.ready;measure();}
+  bgGlow(t);
+
+  /* tracker */
+  const trk=eout(prog(t,21.4,22.0))*(1-prog(t,40.2,40.7));
+  show($('tracker'),trk,0,(1-trk)*-30);
+  $('t1').classList.toggle('on',t>=21.6&&t<30.3);
+  $('t2').classList.toggle('on',t>=30.3);
+
+  /* ---------- presenter 1 (0 - 5.8) ---------- */
+  const p1=eout(prog(t,0.0,0.5))*(1-eio(prog(t,5.9,6.5)));
+  show($('p1'),p1,0,(1-eout(prog(t,0,0.5)))*40-eio(prog(t,5.9,6.5))*70);
+
+  /* ---------- ChatGPT draft card ---------- */
+  const hp={hA:eout(prog(t,3.8,4.4)),hB:eout(prog(t,4.7,5.3)),hC:eout(prog(t,5.3,5.9))};
+  $('mailtxt').innerHTML=segHTML(MAIL_SEGS,9999,hp);
+  const mIn=eout(prog(t,0.2,0.9));
+  const mMove=eio(prog(t,5.9,6.6));
+  const mOut=1-prog(t,14.8,15.3);
+  show($('mail'),mIn*mOut,0,(1-mIn)*90-560*mMove-(1-mOut)*30);
+  $('tagA').style.opacity=eout(prog(t,4.1,4.5));$('tagB').style.opacity=eout(prog(t,5.0,5.4));
+  const f=Math.max(Math.sin(prog(t,8.9,9.4)*Math.PI),Math.sin(prog(t,11.1,11.6)*Math.PI),0);
+  $('shine').style.opacity=.16*f;
+
+  /* ---------- prompt bar (6.0 - 15.0) ---------- */
+  const pb=eout(prog(t,6.4,6.9))*(1-prog(t,14.5,15.0));
+  show($('pbar'),pb,0,(1-pb)*40);
+  let ptxt='';
+  if(t<9.4)ptxt='make it more human'.slice(0,typedN(t,7.55,15,19));
+  else if(t<11.5)ptxt='make it sound natural'.slice(0,typedN(t,9.7,20,21));
+  $('pbtxt').textContent=ptxt;
+  const press=(t>8.9&&t<9.1)||(t>11.1&&t<11.3);
+  $('pbsend').style.transform=press?'scale(.88)':'scale(1)';
+  show($('samepill'),eout(prog(t,11.8,12.3))*(1-prog(t,14.5,14.9)),0,(1-eout(prog(t,11.8,12.3)))*20);
+
+  /* ---------- big words (15.5 - 21.8) ---------- */
+  show($('big1'),eout(prog(t,15.5,16.0))*(1-prog(t,16.9,17.3)),0,(1-eout(prog(t,15.5,16.0)))*40);
+  const out15=1-prog(t,21.2,21.8);
+  show($('two'),eout(prog(t,17.3,17.7))*out15,0,(1-eout(prog(t,17.3,17.7)))*20);
+  show($('bwC'),eout(prog(t,18.2,18.65))*out15,0,(1-eout(prog(t,18.2,18.65)))*50);
+  show($('barr'),eout(prog(t,19.1,19.5))*out15);
+  show($('bwH'),eout(prog(t,19.6,20.05))*out15,0,(1-eout(prog(t,19.6,20.05)))*50);
+
+  /* ---------- step 1 prompt card (22.0 - 30.2) ---------- */
+  const pc=eout(prog(t,22.1,22.6))*(1-eio(prog(t,29.6,30.2)));
+  show($('pcard'),pc,0,(1-eout(prog(t,22.1,22.6)))*70-eio(prog(t,29.6,30.2))*70);
+  const php={pw:eout(prog(t,27.6,28.1)),pt:eout(prog(t,28.4,28.9)),pn:eout(prog(t,29.0,29.5))};
+  $('ptxt').innerHTML=segHTML(PROMPT_SEGS,typedN(t,22.8,100,FULL(PROMPT_SEGS)),php);
+  const wo=1-eio(prog(t,29.6,30.2));
+  [['w1',27.6],['w2',28.4],['w3',29.0]].forEach(([id,a])=>{const p=eout(prog(t,a,a+.4));show($(id),p*wo,(1-p)*-40,0)});
+
+  /* ---------- step 2 UI (30.3 - 40.8) ---------- */
+  const ui=eout(prog(t,30.3,31.0))*(1-eio(prog(t,40.2,40.8)));
+  show($('ui'),ui,0,(1-eout(prog(t,30.3,31.0)))*80+eio(prog(t,40.2,40.8))*90);
+  const iprog={iA:eout(prog(t,33.2,33.8))};
+  $('inbox').innerHTML=segHTML(INPUT_SEGS,typedN(t,31.2,330,FULL(INPUT_SEGS)),iprog);
+  const cx=lerp(760,866,eio(prog(t,35.0,35.9))),cy=lerp(1250,1018,eio(prog(t,35.0,35.9)));
+  const cur=$('cursor');
+  const cOp=eout(prog(t,34.8,35.1))*(1-prog(t,36.7,37.0));
+  cur.style.opacity=cOp;cur.style.display=cOp<=.001?'none':'block';
+  cur.style.left=cx+'px';cur.style.top=cy+'px';
+  const hpress=t>36.0&&t<36.2;
+  $('hbtn').style.transform=hpress?'scale(.93)':'scale(1)';
+  $('hbtn').textContent=(t>36.2&&t<37.4)?'Humanizing…':'Humanize';
+  $('hbtn').style.background=(t>36.2&&t<37.4)?'#4b5060':'#14161c';
+  const rp=prog(t,36.0,36.5);
+  $('rip').style.opacity=(rp>0&&rp<1)?1-rp:0;
+  $('rip').style.left='866px';$('rip').style.top='1018px';
+  $('rip').style.transform=`translate(-50%,-50%) scale(${1+2.5*rp})`;
+  const skel=(t>=36.2&&t<37.5);
+  $('skel').style.opacity=skel?1:0;
+  document.querySelectorAll('#skel i').forEach((e,i)=>{e.style.backgroundPosition=((t*140+i*40)%200-100)+'% 0'});
+  for(let i=0;i<3;i++){
+    const s=$('sc'+i);const a=37.5+.12*i;const p=eout(prog(t,a,a+.5));
+    s.style.opacity=p;s.style.transform=`translateY(${(1-p)*20}px)`;
+    const c=eout(prog(t,a+.1,a+1.3));const v=VALS[i]*c;
+    $('v'+i).textContent=(i===0)?(v.toFixed(2)+'%'):(i===1)?v.toFixed(1):(v.toFixed(1)+'%');
+  }
+  const glow=Math.max(0,Math.sin(prog(t,38.6,40.2)*Math.PI));
+  $('sc0').style.boxShadow=`0 0 ${60*glow}px ${10*glow}px rgba(22,163,74,${.45*glow})`;
+  $('sc0').style.borderColor=glow>.2?'#16a34a':'#e2e5ec';
+  const oprog={oA:eout(prog(t,39.3,39.9))};
+  $('outbox').style.opacity=skel?0:1;
+  $('outbox').innerHTML=segHTML(OUT_SEGS,t<37.5?0:typedN(t,37.6,230,FULL(OUT_SEGS)),oprog);
+  const fl=eout(prog(t,39.4,39.9))*(1-prog(t,40.0,40.4));
+  if(window.POS){
+    const fb=$('fB'),fa=$('fA');
+    fb.style.left=POS.bx+'px';fb.style.top=(POS.by+12)+'px';fb.style.opacity=fl;
+    fa.style.left=POS.ax+'px';fa.style.top=(POS.ay+12)+'px';fa.style.opacity=fl;
+  }
+
+  /* ---------- closing (40.5 - 47.4) ---------- */
+  const fin=1-prog(t,47.0,47.5);
+  const q6=eout(prog(t,40.3,40.9))*fin;
+  show($('p6'),q6,0,(1-eout(prog(t,40.3,40.9)))*-40);
+  const o2=eout(prog(t,40.9,41.5))*fin;
+  show($('out2'),o2,0,(1-eout(prog(t,40.9,41.5)))*80);
+  $('out2txt').innerHTML=segHTML(OUT_SEGS,9999,{oA:0});
+  const sw=prog(t,41.4,43.0);
+  $('sweep').style.opacity=(sw>0&&sw<1)?.9:0;
+  $('sweep').style.top=(104+sw*400)+'px';
+  const words=QUOTE.split(' ');const qEl=$('quote');
+  if(!qEl.dataset.built){qEl.innerHTML=words.map(w=>`<span>${esc(w)}</span>`).join(' ');qEl.dataset.built=1}
+  qEl.style.display=(t>44.3)?'block':'none';qEl.style.opacity=fin;
+  [...qEl.children].forEach((s,i)=>{const a=44.55+i*(2.3/words.length);const p=eout(prog(t,a,a+.3));s.style.opacity=p;s.style.transform=`translateY(${(1-p)*18}px)`});
+  /* presenter frames when available */
+  const setImg=async(id,dir,start,n,on,fps=30)=>{if(!on)return;const el=$(id);el.style.display='block';const i=Math.max(1,Math.min(n,Math.floor((T-start)*fps)+1));const src=dir+'/p'+String(i).padStart(4,'0')+'.jpg';if(!el.src.endsWith(src))el.src=src;try{await el.decode()}catch(e){}};
+  if(HAVE_P1)$('p1').classList.add('live');if(HAVE_P6)$('p6').classList.add('live');
+  await setImg('p1img','pv1',0,156,HAVE_P1&&T<6.5,24);
+  await setImg('p6img','pv6',CUES.n6,Math.round(CUES.D*24)+12,HAVE_P6&&T>CUES.n6-.1,24);
+};
+window.__render(0);
+</script>
+</body>
+</html>
