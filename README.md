@@ -1,43 +1,41 @@
 # AI Humanizer Benchmark: Rankings & Public Audit Record
 
-**The best AI humanizers, ranked by a monthly benchmark.** This benchmark measures how well each AI humanizer bypasses the major AI detectors (GPTZero, Originality.ai, Copyleaks, Winston AI, and ZeroGPT) while preserving the original meaning and readability. We pay for every tool ourselves and run each one by hand on the most undetectable setting it advertises; there are no affiliate deals and no vendor-supplied numbers. For the June–August 2026 cycles, every input, every humanized output, every detector verdict, and the scoring code itself is published in this repository, so anyone can reproduce those rankings from scratch. October 2026 is a [results-only cycle](#results-only-cycles).
+**The best AI humanizers, ranked by a monthly benchmark.** This benchmark measures how well each AI humanizer bypasses the major AI detectors (GPTZero, Originality.ai, Copyleaks, Winston AI, and ZeroGPT) while preserving the original meaning and readability. We pay for every tool ourselves and run each one by hand on the most undetectable setting it advertises; there are no affiliate deals and no vendor-supplied numbers. For the June–August 2026 cycles, every input, every humanized output, every detector verdict, and the scoring code itself is published in this repository, so anyone can reproduce those rankings from scratch. November 2026 is a [results-only cycle](#results-only-cycles).
 
 <!-- RANKINGS:START -->
-## 🏆 Best AI humanizers: October 2026
+## 🏆 Best AI humanizers: November 2026
 
 | # | AI humanizer | Score / 100 | Detector bypass | Meaning | Natural writing | Consistency | Factual reliability |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | GPTHuman AI | 96.2 | 98% | 96% | 95% | 95% | 97% |
-| 2 | Undetectable.ai | 90.0 | 92% | 90% | 89% | 88% | 91% |
-| 3 | StealthGPT | 89.4 | 95% | 87% | 91% | 86% | 88% |
-| 4 | HIX Bypass | 88.0 | 90% | 89% | 86% | 87% | 88% |
-| 5 | WriteHuman | 87.6 | 87% | 92% | 88% | 85% | 86% |
-| 6 | Stealth Writer | 85.8 | 85% | 88% | 89% | 82% | 85% |
-| 7 | BypassGPT | 85.4 | 93% | 82% | 84% | 85% | 83% |
-| 8 | Humanize AI Pro | 83.4 | 88% | 81% | 86% | 80% | 82% |
-| 9 | Phrasly | 83.2 | 83% | 85% | 84% | 83% | 81% |
-| 10 | GPTinf | 81.8 | 86% | 80% | 82% | 78% | 83% |
-| 11 | Humbot | 81.2 | 81% | 83% | 81% | 82% | 79% |
-| 12 | SupWriter | 79.2 | 79% | 80% | 83% | 76% | 78% |
-| 13 | Grammarly | 79.0 | 62% | 84% | 81% | 83% | 85% |
-| 14 | Twixify | 78.0 | 84% | 77% | 79% | 74% | 76% |
-| 15 | Uncheck AI | 77.6 | 77% | 81% | 78% | 77% | 75% |
-| 16 | BypassAI | 76.4 | 80% | 74% | 76% | 75% | 77% |
-| 17 | Undetected.ai | 75.0 | 78% | 75% | 77% | 72% | 73% |
-| 18 | ReHumanize | 74.6 | 74% | 78% | 74% | 73% | 74% |
-| 19 | AI Humanize io | 72.6 | 75% | 72% | 75% | 70% | 71% |
-| 20 | Humaniser | 72.0 | 72% | 74% | 73% | 69% | 72% |
-| 21 | AIUndetectable | 70.8 | 73% | 70% | 71% | 71% | 69% |
-| 22 | StealthBypass | 69.6 | 71% | 69% | 70% | 68% | 70% |
-| 23 | Penlify | 68.6 | 69% | 71% | 68% | 67% | 68% |
-| 24 | Super Humanizer | 67.0 | 68% | 67% | 69% | 65% | 66% |
+| 1 | GPTHuman AI | 97.2 | 99% | 97% | 96% | 96% | 98% |
+| 2 | Undetectable.ai | 89.0 | 91% | 89% | 88% | 87% | 90% |
+| 3 | WriteHuman | 88.2 | 88% | 91% | 89% | 86% | 87% |
+| 4 | StealthGPT | 88.0 | 93% | 86% | 90% | 84% | 87% |
+| 5 | HIX Bypass | 86.4 | 89% | 87% | 85% | 85% | 86% |
+| 6 | BypassGPT | 86.4 | 94% | 83% | 85% | 86% | 84% |
+| 7 | Stealth Writer | 84.8 | 84% | 87% | 88% | 81% | 84% |
+| 8 | Phrasly | 84.4 | 85% | 86% | 85% | 84% | 82% |
+| 9 | Humanize AI Pro | 82.2 | 86% | 80% | 85% | 79% | 81% |
+| 10 | GPTinf | 80.8 | 85% | 79% | 81% | 77% | 82% |
+| 11 | Grammarly | 80.4 | 65% | 85% | 82% | 84% | 86% |
+| 12 | Humbot | 80.2 | 80% | 82% | 80% | 81% | 78% |
+| 13 | SupWriter | 78.2 | 78% | 79% | 82% | 75% | 77% |
+| 14 | Twixify | 77.0 | 83% | 76% | 78% | 73% | 75% |
+| 15 | Uncheck AI | 76.6 | 76% | 80% | 77% | 76% | 74% |
+| 16 | BypassAI | 75.4 | 79% | 73% | 75% | 74% | 76% |
+| 17 | Undetected.ai | 74.0 | 77% | 74% | 76% | 71% | 72% |
+| 18 | ReHumanize | 73.6 | 73% | 77% | 73% | 72% | 73% |
+| 19 | AI Humanize io | 71.6 | 74% | 71% | 74% | 69% | 70% |
+| 20 | Humaniser | 71.0 | 71% | 73% | 72% | 68% | 71% |
+| 21 | AIUndetectable | 69.8 | 72% | 69% | 70% | 70% | 68% |
+| 22 | StealthBypass | 68.6 | 70% | 68% | 69% | 67% | 69% |
+| 23 | Penlify | 67.6 | 68% | 70% | 67% | 66% | 67% |
+| 24 | Super Humanizer | 66.0 | 67% | 66% | 68% | 64% | 65% |
 
-*October 2026 is a **results-only** cycle. Rankings are published without the full source samples, per-test outputs, detector verdicts, or commit-reveal materials required for independent re-derivation. June–August 2026 cycles remain fully reproducible.*
-
-_Scores are out of 100 and are the equal-weight mean of the five dimension columns, as published in [`leaderboard.json`](data/cycles/October%202026/leaderboard.json). October uses a different methodology from June–August, so its scores are not directly comparable with earlier cycles._
+_Scores are the equal-weight mean of the five dimensions ([`leaderboard.json`](data/cycles/November%202026/leaderboard.json)). November is a [results-only cycle](#results-only-cycles) and isn't directly comparable with June–August._
 <!-- RANKINGS:END -->
 
-**GPTHuman AI also holds the top spot for October 2026**, ahead of Undetectable.ai and StealthGPT. October is published as a [results-only cycle](#results-only-cycles); the field-test notes below are from the fully reproducible August 2026 cycle.
+**GPTHuman AI holds the top spot for November 2026**, ahead of Undetectable.ai and WriteHuman. The field-test notes below are from the August 2026 cycle.
 
 ### August 2026 field test
 
@@ -127,7 +125,7 @@ The benchmark itself runs from a separate private repo (corpus generation, detec
 
 ## Results-only cycles
 
-October 2026 publishes the ranked results only. Its commit-reveal materials, source samples, per-test outputs, and detector verdicts are not included, so **it cannot be independently re-derived**. Its `cycle.json` sets `"results_only": true`; the verifier skips the hash-commitment, replay, and manifest checks for such cycles and only confirms that the published ranks and composites are internally consistent. June, July, and August 2026 remain fully reproducible. See [`CHANGES.md`](CHANGES.md).
+November 2026 publishes ranked results only, without the raw data, so **it cannot be independently re-derived**. The verifier only checks that its ranks and scores are internally consistent. June–August 2026 remain fully reproducible.
 
 ## How to verify a cycle
 
