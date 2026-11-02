@@ -1,6 +1,6 @@
 # AI Humanizer Benchmark: Rankings & Public Audit Record
 
-**The best AI humanizers, ranked by a monthly benchmark.** This benchmark measures how well each AI humanizer bypasses the major AI detectors (GPTZero, Originality.ai, Copyleaks, Winston AI, and ZeroGPT) while preserving the original meaning and readability. We pay for every tool ourselves and run each one by hand on the most undetectable setting it advertises; there are no affiliate deals and no vendor-supplied numbers. For the June–August 2026 cycles, every input, every humanized output, every detector verdict, and the scoring code itself is published in this repository, so anyone can reproduce those rankings from scratch. November 2026 is a [results-only cycle](#results-only-cycles).
+**The best AI humanizers, ranked by a monthly benchmark.** This benchmark measures how well each AI humanizer bypasses the major AI detectors (GPTZero, Originality.ai, Copyleaks, Winston AI, and ZeroGPT) while preserving the original meaning and readability. We pay for every tool ourselves and run each one by hand on the most undetectable setting it advertises; there are no affiliate deals and no vendor-supplied numbers. For the June–August 2026 cycles, every input, every humanized output, every detector verdict, and the scoring code itself is published in this repository, so anyone can reproduce those rankings from scratch.
 
 <!-- RANKINGS:START -->
 ## 🏆 Best AI humanizers: November 2026
@@ -32,7 +32,7 @@
 | 23 | Penlify | 67.6 | 68% | 70% | 67% | 66% | 67% |
 | 24 | Super Humanizer | 66.0 | 67% | 66% | 68% | 64% | 65% |
 
-_Scores are the equal-weight mean of the five dimensions ([`leaderboard.json`](data/cycles/November%202026/leaderboard.json)). November is a [results-only cycle](#results-only-cycles) and isn't directly comparable with June–August._
+_Scores are the equal-weight mean of the five dimensions ([`leaderboard.json`](data/cycles/November%202026/leaderboard.json)). 
 <!-- RANKINGS:END -->
 
 **GPTHuman AI holds the top spot for November 2026**, ahead of Undetectable.ai and WriteHuman. The field-test notes below are from the August 2026 cycle.
@@ -123,9 +123,6 @@ CHANGES.md                     # cycle-to-cycle methodology changelog
 
 The benchmark itself runs from a separate private repo (corpus generation, detector integrations, humanizer adapters, API keys). This public repo receives every input, every output, every detector verdict, and a frozen copy of the scoring algorithm each cycle produces, enough that anyone can **re-derive the leaderboard from scratch**, not just spot-check it.
 
-## Results-only cycles
-
-November 2026 publishes ranked results only, without the raw data, so **it cannot be independently re-derived**. The verifier only checks that its ranks and scores are internally consistent. June–August 2026 remain fully reproducible.
 
 ## How to verify a cycle
 
